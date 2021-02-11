@@ -10,11 +10,9 @@
   "dependencies": {
     "axios": "^0.21.1",
     "compression": "^1.7.4",
-    "debug": "~2.6.9",
     "express": "~4.16.1",
-    "feedparser": "^2.2.10",
     "helmet": "^4.4.1",
-    "htmlparser2": "^6.0.0",
+    "ioredis": "^4.22.0",
     "morgan": "~1.9.1",
     "node-fetch": "^2.6.1"
   },
