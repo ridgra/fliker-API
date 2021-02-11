@@ -1,11 +1,9 @@
 const errorTypes = {
-  Forbidden: 403,
-  Unauthorized: 401,
+  NotFound: 404,
 };
 
 const errorMessages = {
-  Forbidden: 'Forbiden',
-  Unauthorized: 'Unauthorized',
+  NotFound: 'Not Found',
 };
 
 function notFound(req, res, next) {
@@ -20,7 +18,10 @@ function errorHandler(error, req, res, next) {
   res.status(statusCode);
   res.json({
     status: statusCode,
-    message: errorMessages[error.name] || error.message,
+    message:
+      statusCode === 500
+        ? 'internal server error'
+        : errorMessages[error.name] || error.message,
     errors: error.errors || undefined,
   });
 }
