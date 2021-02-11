@@ -1,10 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const publicFeed = require('./public-feed');
 
-router.get('/api', function (req, res) {
-  res.json({
-    message: 'Hello World',
-  });
-});
+router.use('/public-feed', publicFeed)
 
 module.exports = router;
