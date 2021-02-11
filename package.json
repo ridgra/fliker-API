@@ -5,15 +5,18 @@
   "scripts": {
     "start": "NODE_ENV=production node ./bin/server",
     "dev": "NODE_ENV=development nodemon bin/server",
-    "test": "NODE_ENV=test jest --detectOpenHandles --runInBand --forceExit"
+    "test": "NODE_ENV=test jest --watch --detectOpenHandles --runInBand --forceExit"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "compression": "^1.7.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "feedparser": "^2.2.10",
     "helmet": "^4.4.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "htmlparser2": "^6.0.0",
+    "morgan": "~1.9.1",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "jest": "^26.6.3",
