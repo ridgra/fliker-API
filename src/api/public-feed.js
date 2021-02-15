@@ -15,7 +15,7 @@ router.get('/', async function (req, res, next) {
 
     if (tagsQuery) {
       const { data } = await axios.get(`${config.api.flickrURL}${tagsQuery}`);
-      res.status(200).json(data);
+      return res.status(200).json(data);
     }
 
     let cached = await redis.get('data');
